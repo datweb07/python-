@@ -4,25 +4,23 @@ import time
 turtle.setup(800, 600)
 
 
-def draw_text():
-    t.color("yellow")  # Màu chữ
+def text():
+    t.color("white")
     t.penup()
-    # Tính toán chiều dài chuỗi và điều chỉnh vị trí để căn giữa
-    text = "HAPPY NEW YEAR 2025"
-    width = len(text) * 30  # 40 là độ rộng của mỗi ký tự (khoảng cách giữa các ký tự)
-    t.goto(-width / 2.5, 0)  # Căn giữa theo chiều ngang
-    t.pendown()
+    t.hideturtle()
+    writeText = "buồn ngủ quá ^_^"
+    width = len(writeText) * 30
+    t.goto(width / -1.5, 0)
 
-    for char in text.upper():  # Chuyển thành chữ hoa
-        t.write(char, font=("Arial", 30, "bold"))  # Thay đổi font chữ và kích thước
-        time.sleep(0.3)  # Hiệu ứng chạy chậm lại
-        t.forward(40)  # Dịch chuyển con trỏ để viết chữ tiếp theo
+
+    for char in writeText:
+        t.write(char, font=("Times New Roman", 40, "normal"))
+        time.sleep(0.3)
+        t.forward(40)
 
 
 t = turtle.Turtle()
-t.speed(3)
-s = turtle.Screen()
-s.bgcolor('black')
-
-draw_text()
+t.speed(4)
+s = turtle.Screen().bgcolor("black")
+text()
 turtle.done()
