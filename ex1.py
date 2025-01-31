@@ -52,7 +52,7 @@ turtle.setup(800, 600)
 screen = turtle.Screen().bgcolor("black")
 def smile():
     t = turtle.Turtle()
-    t.hideturtle()
+    t.hideturtle() #ẩn mũi tên khi vẽ
     t.speed(3)
     t.pensize(3)
 
@@ -63,8 +63,8 @@ def smile():
     t.goto(0, -50)
     t.pendown()
     t.color("yellow")
-    t.begin_fill()
-    t.circle(100, 360)
+    t.begin_fill()  #fill bg
+    t.circle(100, 360)   #bán kính và góc đường tròn
     t.end_fill()
 
     #left eye
@@ -102,7 +102,7 @@ def text():
     x.goto(-170, -150)
 
     for char in writeText:
-         x.write(char, font=("Arial", 40, "italic"))
+         x.write(char, font=("Times New Roman", 40, "normal"))
          time.sleep(0.3)
          x.forward(30)
 
@@ -119,9 +119,9 @@ def heart():
     h.begin_fill()
     h.fillcolor("red")
     h.left(150)
-    h.forward(60)
+    h.forward(60)   #vẽ tiến lên n đơn vị pixel
     h.circle(-30, 180)
-    h.setheading(60)
+    h.setheading(60)   #điều chỉnh góc
     h.circle(-30, 180)
     h.forward(60)
     h.end_fill()
