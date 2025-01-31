@@ -49,7 +49,7 @@
 import turtle
 import time
 turtle.setup(800, 600)
-
+screen = turtle.Screen().bgcolor("black")
 def smile():
     t = turtle.Turtle()
     t.hideturtle()
@@ -97,18 +97,37 @@ def text():
     x = turtle.Turtle()
     x.hideturtle()
     x.color("white")
-    writeText="buồn ngủ quá ^_^"
-    width = len(writeText) * 25
+    writeText="gúc nai"
     x.penup()
-    x.goto(width / -2, -150)
+    x.goto(-170, -150)
 
     for char in writeText:
-         x.write(char, font=("Times New Roman", 40, "normal"))
+         x.write(char, font=("Arial", 40, "italic"))
          time.sleep(0.3)
          x.forward(30)
 
 
-screen = turtle.Screen().bgcolor("black")
+def heart():
+    h = turtle.Turtle()
+    h.hideturtle()
+    h.pensize(2)
+    h.speed(1)
+    h.color("red")
+    h.penup()
+    h.goto(150, -159)
+    h.pendown()
+    h.begin_fill()
+    h.fillcolor("red")
+    h.left(150)
+    h.forward(60)
+    h.circle(-30, 180)
+    h.setheading(60)
+    h.circle(-30, 180)
+    h.forward(60)
+    h.end_fill()
+
+
 smile()
 text()
+heart()
 turtle.done()
