@@ -45,8 +45,9 @@
 # draw_star(200)
 # turtle.done()
 
-
+#draw smile ^_^
 import turtle
+import time
 turtle.setup(800, 600)
 
 def smile():
@@ -58,8 +59,9 @@ def smile():
 
 
     #face
+    t.penup()
+    t.goto(0, -50)
     t.pendown()
-    t.goto(0, -100)
     t.color("yellow")
     t.begin_fill()
     t.circle(100, 360)
@@ -67,7 +69,7 @@ def smile():
 
     #left eye
     t.penup()
-    t.goto(-40, 30)
+    t.goto(-40, 70)
     t.pendown()
     t.color("black")
     t.begin_fill()
@@ -76,7 +78,7 @@ def smile():
 
     #right eye
     t.penup()
-    t.goto(40, 30)
+    t.goto(40, 70)
     t.pendown()
     t.begin_fill()
     t.circle(10, 360)
@@ -84,15 +86,29 @@ def smile():
 
     #mouth
     t.penup()
-    t.goto(-35, -20)
+    t.goto(-35, 30)
     t.setheading(60)
     t.pendown()
     t.setheading(-60)
-    t.color("black")
-    t.begin_fill()
     t.circle(40, 120)
+
+
+def text():
+    x = turtle.Turtle()
+    x.hideturtle()
+    x.color("white")
+    writeText="buồn ngủ quá ^_^"
+    width = len(writeText) * 25
+    x.penup()
+    x.goto(width / -2, -150)
+
+    for char in writeText:
+         x.write(char, font=("Times New Roman", 40, "normal"))
+         time.sleep(0.3)
+         x.forward(30)
 
 
 screen = turtle.Screen().bgcolor("black")
 smile()
+text()
 turtle.done()
