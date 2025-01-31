@@ -9,14 +9,14 @@ def text():
     t.penup()
     t.hideturtle()
     writeText = "buồn ngủ quá ^_^"
-    width = len(writeText) * 30
+    width = len(writeText) * 25
     t.goto(width / -1.5, 0)
 
 
     for char in writeText:
         t.write(char, font=("Times New Roman", 40, "normal"))
         time.sleep(0.3)
-        t.forward(40)
+        t.forward(30)
 
 
 t = turtle.Turtle()
