@@ -1,1 +1,1 @@
-<h1> Danh sách các bài python cơ bản</h1>
+<h1 align=center> Danh sách các bài python cơ bản</h1>
